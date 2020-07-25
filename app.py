@@ -2,7 +2,7 @@ from flask import Flask, url_for, render_template, redirect
 from forms import JobForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'seunmelody'
+
 
 ##################################################################################
 #view section
