@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+    <meta charset="UTF-8">
+
+
+</head>
+<body>
+
+<h1>STARK INDUTRIES  <span class="badge badge-secondary">HUMAN RESOURCES </span></h1>
+<div class="jumbotron">
+  <form method="POST">
+    {{form.hidden_tag()}}
+
+    <div class="form-group">
+    {{form.name.label(class="form-group")}}
+    {{form.name(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+    {{form.last_name.label(class="form-group")}}
+    {{form.last_name(class="form-control") }}
+    </div>
+
+
+    <div class="form-group">
+    {{form.email.label(class="form-group")}}
+    {{form.email(class="form-control")}}
+
+         {% if form.email.errors %}
+          <ul class="errors">
+              {% for error in form.email.errors %}
+                <li>{{error}}</li>
+              {% endfor %}
+
+          </ul>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+    {{form.phone_number.label(class="form-group")}}
+    {{form.phone_number(class="form-control") }}
+        {% if form.phone_number.errors %}
+          <ul class="errors">
+              {% for error in form.phone_number.errors %}
+                <li>{{error}}</li>
+              {% endfor %}
+
+          </ul>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+    {{form.experience.label(class="form-group")}}
+    {{form.experience(class="form-control") }}
+         {% if form.experience.errors %}
+          <ul class="errors">
+              {% for error in form.experience.errors %}
+                <li>{{error}}</li>
+              {% endfor %}
+
+          </ul>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+    {{form.expertise.label(class="form-group")}}
+    {{form.expertise(class="form-control") }}
+         {% if form.expertise.errors %}
+          <ul class="errors">
+              {% for error in form.expertise.errors %}
+                <li>{{error}}</li>
+              {% endfor %}
+
+          </ul>
+        {% endif %}
+    </div>
+    <div class="form-group">
+    {{form.body.label(class="form-group")}}
+      {{form.body (class="form-control")}}
+         {% if form.body.errors %}
+          <ul class="errors">
+              {% for error in form.body.errors %}
+                <li>{{error}}</li>
+              {% endfor %}
+
+          </ul>
+        {% endif %}
+    </div>
+     <div class="form-group">
+    {{form.submit(class="btn btn-success")}}
+     </div>
+  </form>
+</div>
+</body>
+</html>
