@@ -10,95 +10,22 @@
 
 
     <meta charset="UTF-8">
+     
+     
 
 
 </head>
 <body>
 
-<h1>STARK INDUTRIES  <span class="badge badge-secondary">HUMAN RESOURCES </span></h1>
-<div class="jumbotron">
-  <form method="POST">
-    {{form.hidden_tag()}}
+<h1>WAJE SMART SOLUTIONS <span class="badge badge-secondary">HUMAN RESOURCES BOT </span></h1>
+     
+     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-icon="https:&#x2F;&#x2F;storage.googleapis.com&#x2F;cloudprod-apiai&#x2F;8d8e4981-5a50-45aa-938e-5c58f994b7c4_x.png"
+  chat-title="WAJE-HR-BOT"
+  agent-id="f321f389-bb08-407a-8854-9f10052ba0c1"
+  language-code="en"
+></df-messenger>
 
-    <div class="form-group">
-    {{form.name.label(class="form-group")}}
-    {{form.name(class="form-control") }}
-    </div>
-
-    <div class="form-group">
-    {{form.last_name.label(class="form-group")}}
-    {{form.last_name(class="form-control") }}
-    </div>
-
-
-    <div class="form-group">
-    {{form.email.label(class="form-group")}}
-    {{form.email(class="form-control")}}
-
-         {% if form.email.errors %}
-          <ul class="errors">
-              {% for error in form.email.errors %}
-                <li>{{error}}</li>
-              {% endfor %}
-
-          </ul>
-        {% endif %}
-    </div>
-
-    <div class="form-group">
-    {{form.phone_number.label(class="form-group")}}
-    {{form.phone_number(class="form-control") }}
-        {% if form.phone_number.errors %}
-          <ul class="errors">
-              {% for error in form.phone_number.errors %}
-                <li>{{error}}</li>
-              {% endfor %}
-
-          </ul>
-        {% endif %}
-    </div>
-
-    <div class="form-group">
-    {{form.experience.label(class="form-group")}}
-    {{form.experience(class="form-control") }}
-         {% if form.experience.errors %}
-          <ul class="errors">
-              {% for error in form.experience.errors %}
-                <li>{{error}}</li>
-              {% endfor %}
-
-          </ul>
-        {% endif %}
-    </div>
-
-    <div class="form-group">
-    {{form.expertise.label(class="form-group")}}
-    {{form.expertise(class="form-control") }}
-         {% if form.expertise.errors %}
-          <ul class="errors">
-              {% for error in form.expertise.errors %}
-                <li>{{error}}</li>
-              {% endfor %}
-
-          </ul>
-        {% endif %}
-    </div>
-    <div class="form-group">
-    {{form.body.label(class="form-group")}}
-      {{form.body (class="form-control")}}
-         {% if form.body.errors %}
-          <ul class="errors">
-              {% for error in form.body.errors %}
-                <li>{{error}}</li>
-              {% endfor %}
-
-          </ul>
-        {% endif %}
-    </div>
-     <div class="form-group">
-    {{form.submit(class="btn btn-success")}}
-     </div>
-  </form>
-</div>
 </body>
 </html>
