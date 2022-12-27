@@ -9,4 +9,4 @@ Click == 7.1.2
 idna == 2.10
 itsdangerous ==1.1.0
 dnspython==2.0.0
-setuptools == 49.2.0
+setuptools == 65.5.1
